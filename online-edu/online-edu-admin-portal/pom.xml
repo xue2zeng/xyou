@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.xyou</groupId>
+    <artifactId>online-edu</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>online-edu-admin-portal</artifactId>
+  <name>online-edu-admin-portal</name>
+  <packaging>war</packaging>
+  <description>Demo project for Spring Boot</description>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <finalName>admin-portal</finalName>
+
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>${war.plugin.version}</version>
+        <configuration>
+          <!--如果想在没有web.xml文件的情况下构建WAR，请设置为false-->
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+          <!--设置war包的名字-->
+          <warName>admin-portal</warName>
+          <packagingExcludes>target/admin-portal/node_modules/**/**</packagingExcludes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
