@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: online-edu-user
+  profiles:
+    active: native

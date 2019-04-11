@@ -7,7 +7,6 @@
     <artifactId>online-edu</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.xyou</groupId>
   <artifactId>online-edu-core</artifactId>
   <packaging>jar</packaging>
   <name>online-edu-core</name>
